@@ -91,7 +91,9 @@ class medlearnDashboard
 
                 $new_template = dirname(__FILE__) . '/SM/staff.php';
 					
-				return $new_template; 
+					
+				return $original_template; 	
+				//return $new_template;  // Uncomment when staff.php is done
             }
 
 		
