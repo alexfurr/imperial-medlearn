@@ -1,0 +1,170 @@
+/*** MED STUDENTS LANDING PAGE STYLE ***/
+
+  
+/* GRID LAYOUT */
+
+.medhelp-home-wrap {
+
+  width: 100%;
+  height: 100%;
+  margin: 40px auto;
+  display: grid;
+  grid-template-rows: repeat(2, 250px);
+  grid-template-columns: 1fr 1fr 2fr;
+  grid-gap: 10px;
+
+}
+
+.mhi {
+  font-size: 15px;
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+}
+
+
+.mhi-4 {
+    
+ grid-area: 2 / 1  / span 2 / span 2;
+}
+
+.mhi-5 {
+
+  grid-area: 1 / 3 / span 2;
+ 
+}
+
+
+.medhelp-home-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block; 
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+
+}
+
+.medhelp-home-wrap img:hover {
+ opacity: 1;
+}
+
+.mhi-btn span {
+  
+  padding: 20px;
+  position: absolute;
+  opacity: .9;
+  letter-spacing: .06em;
+  font-size: .97em;
+  background-color: #003E74;
+  min-width: 150px;
+  transition: all .2s;
+  z-index: 9999;
+ 
+
+}
+
+.mhi .mhi-btn {
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+  
+}
+
+.mhi span:hover {
+
+background-color: #176fbb;
+
+}
+
+/* SEARCH FORM */
+
+
+.help-home-search
+{
+	display: flex;
+	flex-wrap:wrap;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;	
+	margin:auto;
+	
+}
+
+.help-home-search .label-wrap
+{
+	color:#ccc;
+	padding-bottom:10px;
+}
+
+.help-home-search .main-search-box
+{
+  width: 250px;
+  height: 40px;
+  padding: 10px 5px;
+  float: left;    
+  font: bold 15px 'Roboto', 'sans-serif', 'Tahoma';
+  border: 0;
+  background: #eee;
+  border-radius: 3px 0 0 3px;   
+}
+
+
+.help-home-search .main-search-box::placeholder
+{ 
+    color: #b6b6b6;
+}
+
+
+/* Form submit button */
+
+.help-home-search button
+{
+    overflow: visible;
+    position: relative;
+    float: right;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    height: 40px;
+    width: 110px;
+    font: bold 15px/40px 'Roboto', 'trebuchet MS', 'Tahoma';
+    color: #fff;
+    text-transform: uppercase;
+    background: #006eaf;
+    border-radius: 0 3px 3px 0;      
+    text-shadow: 0 -1px 0 rgba(0, 0 ,0, .3);	
+}
+
+.help-home-search button:hover{		
+  background: #006eaf;
+}	
+
+.help-home-search button:active,
+.help-home-search button:focus{   
+  background: #006eaf;
+  outline: 0;   
+}
+
+.help-home-search button:before { /* left arrow */
+  content: '';
+  position: absolute;
+  border-width: 8px 8px 8px 0;
+  border-style: solid solid solid none;
+  border-color: transparent #006eaf transparent;
+  top: 12px;
+  left: -6px;
+}
+.help-home-search button:hover:before{
+  border-right-color: #006eaf;
+}
+
+.help-home-search button:focus:before,
+.help-home-search button:active:before{
+  border-right-color: #006eaf;
+
+}      
+
+.help-home-search button::-moz-focus-inner { /* remove extra button spacing for Mozilla Firefox */
+  border: 0;
+  padding: 0;
+}    
+

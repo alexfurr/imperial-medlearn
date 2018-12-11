@@ -1,0 +1,758 @@
+/*
+ Theme Name:   medlearn theme 2019
+ Description:  Main home blog for medlearn
+ Author:       Alex Furr
+ Template:     imperial-theme
+ Version:      0.1
+*/
+
+
+/* Header Customsiation */
+
+
+#site-title a {
+    font-family: 'Roboto', sans-serif;
+    font-size: 45px;
+    font-weight: 100;
+    color: #fff;
+    text-decoration: none;
+    display: inline;
+    margin-bottom: 0;
+}
+
+#branding
+{
+	
+	height: 80px;
+	
+}
+
+#medlearn-welcome
+{
+	font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+    font-weight: 100;
+	text-align:center;
+	color:#000;
+	padding:17px 0px 17px 0px;
+
+}
+
+
+
+#sidebar {
+	display:none;
+}
+
+#content {
+	width:100%;
+	padding:0px;
+	margin:0px;
+}
+
+
+#container {
+	padding:0px;
+	margin:0px;
+}
+
+        
+
+.grid-wrapper {
+	position:   relative;
+    display: flex;
+	flex: 1;
+	flex-flow: row;
+}
+.grid-content {
+	flex:       auto;
+}
+.grid-sidebar {
+	width:          250px;
+	border-right:   1px solid #ccc;
+	min-height:     100vh;
+	transition:     width 250ms ease-in-out;
+}
+	
+	
+	
+/* This is for vert menu with links rather than JS detection */
+.grid-sidebar-links	
+{
+	    width:          250px;
+        border-right:   1px solid #ccc;
+        min-height:     100vh;
+        transition:     width 250ms ease-in-out;
+}
+
+.imperial-vert-tabs-menu ul li
+{
+	padding:0px;
+}
+
+.imperial-vert-tabs-menu ul li:hover
+{
+	color:#000;	
+}
+
+.grid-sidebar-links	ul
+{
+background:#fcfcfc;
+}
+.grid-sidebar-links	a
+{
+	color:#a5a5a5;
+	padding:20px;	
+	
+}
+
+.grid-sidebar-links a:hover
+{
+	color:#000;	
+	
+}
+
+
+
+
+
+        .grid-sidebar .gridNav {
+            box-sizing:     border-box;
+            /*border-right:   1px solid #ccc;*/
+            /*min-height:     100vh;*/
+            width:          100%;
+            width:          249px;
+            /*order:          1;
+            flex:           1;	*/
+            background:#fcfcfc;
+        }
+        
+        /*
+        .grid-wrapper .imperial-vert-tabs-content {
+            min-width:500px;
+        }
+        */
+
+
+        
+    
+        .nav-toggle-wrap {
+            display:        none;
+            box-sizing:     border-box;
+            width: 50px;
+            position: absolute;
+            right: -50px;
+            top: -1px;
+        }
+        #nav_toggle_button {
+            font-size:  26px;
+            border: 1px solid #ccc;
+            border-bottom-right-radius:  4px;
+            box-sizing:     border-box;
+            padding: 5px 0px 4px 19px;
+            background: #46be8a;
+            color:      #fff;
+        }
+
+        /*
+        #nav_toggle_button, #nav_toggle_button * {
+            transition:     transform 2s ease-in-out;
+        }
+        */
+        
+
+@media only screen and ( max-width: 767px ) {
+    
+    h1 {
+        padding-left:65px;
+        padding-bottom:6px;
+        margin:10px 0px 0px 0px !important;
+    }
+    
+    .grid-wrapper {
+        position:       relative;
+        display:        block;
+        flex:           none;
+        flex-flow:      row;
+    }
+    .grid-content {
+        flex:           none;
+        box-sizing:     border-box;
+        width:          100%;
+        padding-left:   35px;
+    }
+    
+    .grid-sidebar {
+        width:          0px;
+        
+        display:        block;
+        position:       absolute;
+        /*width:          80%;
+        max-width:      250px;*/
+        background:     rgba(255,255,255,0.9);
+        box-shadow: 1px 1px 4px 0px #00000033;
+        border-right:   1px solid #a7a7a7;
+    }
+    .grid-sidebar .gridNav {
+        position:       absolute;
+        width:          250px;
+        display:        block;
+        top:            53px;
+        right:          0;
+    }
+    .nav-toggle-wrap {
+        display:    block;
+    }
+    
+    .grid-sidebar.mobile-mode-wide {
+        width:  250px;
+    }   
+}
+
+
+
+
+.profile-avatar img
+{
+	width:180px;
+}
+
+
+.profile-avatar
+{		
+	text-align: center;
+}
+
+
+
+/* Homepage */
+
+.imperial-homepage
+{
+
+}
+
+.home-main
+{
+	float:left;
+	width: calc(100% - 380px);
+	margin-right:50px;
+	min-width:300px;
+}
+
+@media only screen and (max-width: 800px) {
+	.home-main { width:100%;}
+}
+
+.home-sidebar
+{
+	min-width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+
+@media only screen and (max-width: 500px)
+{
+	
+	.imperial-homepage .home-sidebar
+	{
+		
+	}
+	
+	.imperial-homepage .home-sidebar .topic-box {
+		
+		height:140px;
+		
+		
+	}
+}
+
+
+/* Topic boxes */
+.topic-box-wrap-columns
+{
+	padding-top:20px;
+	display: flex;
+	flex-wrap:wrap;
+	align-items: center;
+    justify-content: center;	
+}
+
+.topic-box {
+    height: 200px;
+	width:300px;	
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    margin:0px 10px 18px 10px;
+	box-shadow: 4px 4px 14px 0px #ccc;
+}
+
+
+/* Make the boxe smaller on mobile */
+@media only screen and ( max-width: 500px )
+{
+
+	.topic-box {
+		width: 210px;
+		height: 150px;
+	}
+
+}
+
+.topic-box div.image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+
+.topic-box .box-heading
+{
+	position:absolute;
+	top: 0px;
+	padding:7px;
+	font-size:26px;
+	color:#000;
+	background:#fff;
+	width:100%;	
+	font-weight:300;
+	opacity: 0.7;
+	
+	
+}
+
+.topic-box .box-title
+{	
+	position:absolute;
+	bottom:45px;
+	background:#000;
+	padding:5px 10px;
+    font-size: 17px;
+    color: #fff;
+	width:100%;	
+	opacity: 0.8;
+}
+
+
+.topic-box  .box-info
+{
+	position:absolute;
+	bottom:0px;
+    font-size: 12px;
+	color:#fff;
+	width:100%;
+	padding:10px;
+	height:45px;
+    line-height: 15px;	
+
+}
+
+/* End of Topic Boxes */
+
+.home-sidebar-info-sites
+{
+	background:#A51900;
+}
+
+.home-sidebar-info-faqs
+{
+	background:#0F8291;
+}
+
+
+.home-news-wrap
+{
+	border-bottom:1px solid #ccc;
+	padding:10px 0px;
+	margin:0px 20px 20px 20px;
+	
+}
+
+
+
+.home-main > div 
+{
+	border:1px solid #ccc;
+}
+
+.home-main .box-heading
+{
+	background:#000;
+	color:#fff;
+	font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+	padding:8px;
+	font-size:17px;	
+}
+
+.home-news-date
+{
+	font-size:12px;
+}
+
+.home-news-title
+{
+	font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+	font-size:17px;	
+	padding:5px 0px;
+}
+
+.home-news-except p
+{
+	margin-top:2px;
+}
+
+.home-news-categories, .home-news-categories a
+{
+	font-size:10px;
+	padding-top:5px;
+	color:#ccc;
+	
+}
+
+
+
+/* Useful Sites */
+.imperial-useful-sites
+{
+	margin-bottom:20px;
+
+}
+
+.useful-sites-content
+{
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	flex-wrap: wrap;	
+}
+
+/* Make the boxe smaller on mobile */
+@media only screen and ( max-width: 500px )
+{
+
+	.useful-sites-content
+	{
+		align-items: center;
+		justify-content: center;
+
+	}
+
+}
+
+.useful-sites-content  a > div
+{
+	text-align:center;
+	padding:10px 20px;
+	width:150px;
+}
+
+.useful-sites-content .useful-sites-logo img
+{
+	width:100px;
+	padding:10px 10px 0px 10px;
+}
+
+.useful-sites-content .useful-sites-name
+{
+	font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+	font-size:18px;	
+	padding:5px 0px;
+}
+
+.useful-sites-content .useful-sites-name a
+{
+	color:#2b2b2b;
+}
+
+.useful-sites-content .useful-sites-info
+{
+	font-size:12px;
+	color:#919191;
+}
+
+
+/* box Shadows */
+.box-shadow
+{
+	box-shadow: 4px 4px 14px 0px #ccc;
+
+}
+
+
+
+/* Profile CSS */
+ 
+.profilePageAvatar
+{
+	text-align:center;
+	padding:10px;
+}
+
+.editProfileLinks
+{
+	padding-top:5px;
+}
+
+.profilePageAvatar a
+{
+	border:1px solid #ccc;
+    padding: 5px;
+    margin: 5px;
+    font-size: 12px;
+    border-radius: 3px;
+    background: #f7f7f7;	
+}
+
+.profilePageAvatar .rounded-image
+{
+	width:120px;
+	height:120px;
+}
+
+.tutorBookDiv
+{
+	border:1px solid #ccc;
+	padding:10px;
+	border-radius:3px;
+	margin:10px 0px;
+	background:#e3e9f2;
+}
+
+
+
+
+
+/* End of Help page Home */
+ 
+ 
+ 
+ div#mobile_menu_container a {
+    font-size: 20px;
+    border-bottom: 1px solid #ccc;
+    WIDTH: 100%;
+    displaY: block;
+    text-align: center;
+    padding: 10px;
+}
+ 
+ 
+ 
+ 
+ /* My Courses Page */
+ 
+/* Sites Page Accordian */
+
+.sites-container {
+  margin: 0 auto;
+  padding: 10px;
+
+}
+
+
+
+
+.sites-accordion-item .yosTitle {
+
+	background:#336699;
+	width:100%;
+	display:block;
+	padding:10px;
+	color:#fff;
+	border-radius:5px 5px 0px 0px;
+}
+
+
+
+
+.sites-accordion .yosTitle:hover,
+.sites-accordion .yosTitle:hover::after {
+  cursor: pointer;
+  
+}
+
+.sites-accordion-item {
+	border: none;
+	margin-top:10px;
+}
+
+
+/* FLEXBOX */
+
+.flex-container {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;	
+	border:1px solid #ccc;
+	margin-bottom:10px;
+  }
+
+.flex-container__item {
+  font-size: 0.8rem;
+  
+  font-weight: 300;
+  position: relative;
+  width: 180px;
+  height: 200px;
+  overflow: hidden;
+  padding: 6px;
+}
+
+.flex-container__link {
+  text-decoration: none;
+  color: #fff;
+  
+}
+
+.flex-container__link:hover {
+	transform: none;
+	color: #fff;
+}
+
+
+.flex-container__title {
+  padding: 10px;
+  background-image: linear-gradient(to right bottom, rgba(80, 107, 131, 0.85), rgba(0, 62, 116, 0.85));
+  position: absolute;
+  bottom: 0;
+  width: 150px;
+}
+
+
+.flex-container__title:hover {
+  transform: none;
+  color: #ddd;
+}
+
+
+.flex-container__img {
+  width: 150px;
+  height: 200px;
+  /*
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+   transition: all 1s ease;
+   */
+   position: absolute;
+}
+
+.flex-container__img:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  /* width: 275px;
+  
+  height: 275px;
+ */
+}
+
+
+/* My Courses */
+
+.myCoursesAcYearBox
+
+{
+	border:1px solid #ccc;
+	margin:17px;
+	font-size:20px;
+	border-radius: 5px 5px 0px 0px;
+}
+
+.myCoursesAcYearTitle
+
+{
+	background:#336699;
+	color:#fff;
+	padding:15px;
+	border-radius: 5px 5px 0px 0px;
+
+}
+
+
+.myCoursesCatWrap
+{
+	padding-left:20px;
+}
+.myCoursesCatContainer
+{
+
+	padding-top:0px;
+	margin-bottom:10px;
+    padding-bottom:10px;	
+    
+    display: flex;
+    flex-direction: row;
+    
+}
+.myCoursesItem
+{
+	padding:2px;
+	display:flex;	
+}
+
+.myCoursesItem .handbookImage
+{
+	width: 60px;
+	min-height:60px;
+	padding-right:10px;
+}
+
+.myCoursesItem .handbookMeta 
+{
+	width:100%;	
+}
+
+.myCoursesItem .handbookMeta .handbookTitle
+{
+	font-size:14px;
+	font-weight:bold;
+}
+
+.myCoursesItem .handbookMeta .progressWrap
+{
+	margin-top:10px;
+	max-width:500px;
+}
+
+
+
+
+
+.myCoursesCatWrap .catTitle
+{
+	padding:10px 10px 10px 0px;
+	font-size:15px;
+}
+
+
+	
+
+.icl_handbook_logo
+{
+   background-image: url("assets/images/icl_handbook_logo.jpg");
+   z-index: 1;
+   position: absolute;
+   background-size: 70px;
+   width: 80px;
+   height: 30px;
+   background-repeat: no-repeat;
+   top: 10px;
+   left: 10px;
+}
+
+
+.unitMark
+{
+	font-size:30px;
+}
