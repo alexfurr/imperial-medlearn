@@ -687,17 +687,18 @@ background:#fcfcfc;
 .myCoursesCatContainer
 {
 
-	padding-top:0px;
+	padding:0px 20px 20px 20px;
 	margin-bottom:10px;
-    padding-bottom:10px;	
-    
+    padding-bottom:10px;    
     display: flex;
     flex-direction: row;
+	flex-flow: wrap;	
     
 }
 .myCoursesItem
 {
 	padding:2px;
+    flex: 0 0 50%;	
 	display:flex;	
 }
 
@@ -711,6 +712,7 @@ background:#fcfcfc;
 .myCoursesItem .handbookMeta 
 {
 	width:100%;	
+	margin-right:20px;
 }
 
 .myCoursesItem .handbookMeta .handbookTitle
