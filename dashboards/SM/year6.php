@@ -272,7 +272,18 @@ foreach ($formArray as $catInfo)
 	
 	// Precent Complete
 	$percentComplete = round( ($submissionCount/$formCount)*100, 0);							
-	$percentbar= imperialNetworkDraw::drawRadialProgress($percentComplete);	
+
+
+	// Precent Complete
+	$percentComplete = round( ($submissionCount/$formCount)*100, 0);		
+
+	$args = array(
+		"number" => $percentComplete,
+		"text" => $percentComplete.'%',
+
+	);
+	
+	$percentbar= imperialNetworkDraw::drawRadialProgress($args);
 	
 	
 	echo '<a href="profile/?view=forms">';
