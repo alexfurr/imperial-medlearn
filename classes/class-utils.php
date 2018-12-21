@@ -37,6 +37,20 @@ class medlearnUtils
 		return "100"; // If they can't find higher they are in the top!
 		
 	}
+	
+	static function getTempUploadDir()
+	{
+		
+			$uploadDirInfo = wp_upload_dir();
+			$uploadPath = $uploadDirInfo['basedir'] . '/medlearn_temp';
+			
+			if(!file_exists($uploadPath))
+			{
+				mkdir($uploadPath, 775); 				
+			}
+
+			return $uploadPath;
+	}
 }
 
 

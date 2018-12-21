@@ -91,14 +91,19 @@ class medlearnData
 		if (wp_verify_nonce($retrieved_nonce, 'CSV_rotation_UploadNonce' ) )
 		{
 
-			$newFilename = dirname(__FILE__).'/tempImport.csv';
-
-			
+	
+			// Upload temp file to temp dir un uploads 
+			$uploadPath = medlearnUtils::getTempUploadDir();
+			$newFilename = $uploadPath.'/tempRotationsImport.csv';
+			$error = '';
+						
 			if(isset($_FILES['csvFile']['tmp_name']))
 			{
 				
 				global $wpdb;
 				global $imperialPlacementsDB;
+				
+				
 				
 				$dbName = $imperialPlacementsDB->dbTable_placementAllocations;
 				
@@ -295,7 +300,13 @@ class medlearnData
 		if (wp_verify_nonce($retrieved_nonce, 'CSV_UploadNonce' ) )
 		{
 			
-			$newFilename = dirname(__FILE__).'\tempImport.csv';
+			
+			// Upload temp file to temp dir un uploads 
+			$uploadPath = medlearnUtils::getTempUploadDir();
+			$newFilename = $uploadPath.'/tempUsersImport.csv';
+			$error = '';			
+			
+			
 			
 			if(isset($_FILES['csvFile']['tmp_name']))
 			{
@@ -617,7 +628,11 @@ class medlearnData
 		if (wp_verify_nonce($retrieved_nonce, 'CSV_grades_UploadNonce' ) )
 		{
 			
-			$newFilename = dirname(__FILE__).'\tempImport.csv';
+			// Upload temp file to temp dir un uploads 
+			$uploadPath = medlearnUtils::getTempUploadDir();
+			$newFilename = $uploadPath.'/tempGradesImport.csv';
+			$error = '';	
+
 			
 			if(isset($_FILES['csvFile']['tmp_name']))
 			{
