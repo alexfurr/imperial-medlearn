@@ -261,19 +261,32 @@ foreach ($formArray as $catInfo)
 	
 	$formCount = 0;
 	$submissionCount = 0;
+	
+	$totalRequiredSubmissions = 0;
+
 	foreach ($catForms as $formInfo)
 	{
 		$formCount ++;
-
 		
-		if($formInfo['hasSubmitted']==true)
+		$requiredSubmissions = $formInfo['requiredSubmissions'];
+		$totalSubmissions = $formInfo['totalSubmissions'];
+		
+
+		$totalRequiredSubmissions = $totalRequiredSubmissions + $requiredSubmissions;
+		
+		if($formInfo['hasCompleted']==true)
 		{
-			$submissionCount++;
+			$submissionCount = $submissionCount + $requiredSubmissions;
+		}
+		else
+		{
+			$submissionCount = $submissionCount + $totalSubmissions;
 		}
 	}
 	
+	
 	// Precent Complete
-	$percentComplete = round( ($submissionCount/$formCount)*100, 0);		
+	$percentComplete = round( ($submissionCount/$totalRequiredSubmissions)*100, 0);								
 
 	$args = array(
 		"number" => $percentComplete,
@@ -282,6 +295,7 @@ foreach ($formArray as $catInfo)
 	);
 	
 	$percentbar= imperialNetworkDraw::drawRadialProgress($args);
+
 	
 	
 	

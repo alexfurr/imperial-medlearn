@@ -251,6 +251,7 @@ foreach ($myNewsArray as $newsItem)
 $username = $_SESSION['username'];
 $formArray = form2_draw::getFormDashboardInfo($username);
 
+
 echo '<div class="dashboardFormList">';
 foreach ($formArray as $catInfo)
 {	
@@ -259,23 +260,32 @@ foreach ($formArray as $catInfo)
 	
 	$formCount = 0;
 	$submissionCount = 0;
+	
+	$totalRequiredSubmissions = 0;
+
 	foreach ($catForms as $formInfo)
 	{
 		$formCount ++;
-
 		
-		if($formInfo['hasSubmitted']==true)
+		$requiredSubmissions = $formInfo['requiredSubmissions'];
+		$totalSubmissions = $formInfo['totalSubmissions'];
+		
+
+		$totalRequiredSubmissions = $totalRequiredSubmissions + $requiredSubmissions;
+		
+		if($formInfo['hasCompleted']==true)
 		{
-			$submissionCount++;
+			$submissionCount = $submissionCount + $requiredSubmissions;
+		}
+		else
+		{
+			$submissionCount = $submissionCount + $totalSubmissions;
 		}
 	}
 	
+	
 	// Precent Complete
-	$percentComplete = round( ($submissionCount/$formCount)*100, 0);							
-
-
-	// Precent Complete
-	$percentComplete = round( ($submissionCount/$formCount)*100, 0);		
+	$percentComplete = round( ($submissionCount/$totalRequiredSubmissions)*100, 0);								
 
 	$args = array(
 		"number" => $percentComplete,
@@ -295,7 +305,7 @@ foreach ($formArray as $catInfo)
 	echo $catName;
 	echo '</div>';
 	echo '<div class="formCount">';
-	echo $submissionCount.' of '.$formCount.' forms complete';
+	echo $submissionCount.' of '.$totalRequiredSubmissions.' submissions complete';
 	echo '</div>';
 	echo '</div>';
 	echo '</a>';
