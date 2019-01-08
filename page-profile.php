@@ -357,7 +357,7 @@ $args = array(
 );
 $avatarURL = get_user_avatar_url( $args);
 $hash = create_hash();
-$avatarURL = $avatarURL.'?hash=$hash';
+$avatarURL = $avatarURL.'?hash='.$hash;
 
 $subMenu = '';
 
