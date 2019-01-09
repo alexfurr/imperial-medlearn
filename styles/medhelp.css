@@ -120,12 +120,11 @@ background-color: #176fbb;
 .help-home-search button
 {
     overflow: visible;
-    position: relative;
+    position: absolute;
     float: right;
     border: 0;
     padding: 0;
     cursor: pointer;
-    height: 40px;
     width: 110px;
     font: bold 15px/40px 'Roboto', 'trebuchet MS', 'Tahoma';
     color: #fff;
